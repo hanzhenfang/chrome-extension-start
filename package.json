@@ -1,0 +1,26 @@
+{
+  "name": "chrome-ignore",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite -c vite.popup.config.ts",
+    "build": "vue-tsc && vite build -c vite.popup.config.ts && vite build -c vite.content.config.ts && vite build -c vite.background.config.ts && ts-node-esm build.ts",
+    "preview": "vite preview -c vite.popup.config.ts",
+    "test": "vite build -c vite.popup.config.ts --watch"
+  },
+  "dependencies": {
+    "@types/chrome": "^0.0.266",
+    "@types/node": "18.11.18",
+    "unocss": "0.45.12",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@unocss/preset-uno": "0.45.12",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "prettier": "2.8.3",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vue-tsc": "^2.0.6"
+  }
+}
